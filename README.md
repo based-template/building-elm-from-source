@@ -30,7 +30,7 @@ It would be ideal to gather more information about the environments/toolchains u
 
 ## Getting the source package
 
-```
+```shell
 wget https://github.com/elm/compiler/archive/refs/tags/0.19.1.tar.gz
 ```
 
@@ -45,7 +45,7 @@ We're going to be installing ghcup [haskell.org](https://www.haskell.org/ghcup),
 
 Following the instructions in the link above, run
 
-```
+```shell
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ```
 
@@ -53,13 +53,13 @@ which of course requires the tool 'curl', and involves executing a random script
 
 *If you prefer to read over scripts before executing them on your system:*
 
-```
+```shell
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org >> get_ghcup.sh
 ```
 
 Which saves the script to a file, which you may read over before executing via: 
 
-```
+```shell
 sh get_ghcup.sh
 ```
 
@@ -80,7 +80,7 @@ Cabal -> 2.4.1
 
 ghcup provides a wonderful little terminal UI via 
 
-```
+```shell
 ghcup tui
 ```
 
@@ -88,7 +88,7 @@ which will allow you to do everything needed as described below (just to remembe
 
 Running 
 
-```
+```bash
 ghcup list -t ghc
 ```
 
