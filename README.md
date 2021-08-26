@@ -88,34 +88,34 @@ which will allow you to do everything needed as described below (just to remembe
 
 Running 
 
-```bash
+```shell
 ghcup list -t ghc
 ```
 
 and 
 
-```
+```shell
 ghcup list -t cabal
 ```
 
 will show you all of the versions of ghc and cabal available, installed, and 'set' on your system. As of GHCup 0.16.2, a version of a toolchain which hasn't been installed is indicated with an ❌, installed packages are indicated with a single ✔ , and the currently 'set' version of a package is indicated via double ✔✔ .
 
 Installing the correct packages involves:
-```
+```shell
 ghcup install ghc 8.4.3
 ```
 
-```
+```shell
 ghcup install cabal 2.4.1
 ```
 
 And now 'setting' the tools to the correct version:
 
-```
+```shell
 ghcup set ghc 8.4.3
 ```
 
-```
+```shell
 ghcup set cabal 2.4.1
 ```
 
@@ -125,13 +125,13 @@ Running the list commands as above should show two checkmarks next to each of th
 
 Running 
 
-```
+```shell
 ghc --version
 ```
 
 should report that the Glasgow Haskell Compilation System is on version 8.4.3, and
 
-```
+```shell
 cabal --version 
 ```
 
@@ -139,7 +139,7 @@ reports 2.4.1.0
 
 If either tool produces the incorrect version number, run 
 
-```
+```shell
 which <cabal|ghc>
 ```
 
@@ -151,27 +151,27 @@ Install all pre-requisites, as described above, with special attention given to 
 
 From whatever directory, your Elm tarball is located (See: "Getting the source package", above), run:
 
-```
+```shell
 tar -xvzf ./0.19.1.tar.gz
 ```
 
-```
+```shell
 cd compiler-0.19.1/
 ```
 
-```
+```shell
 rm worker/elm.cabal # As suggested by the Dockerfile, appears to prevent Cabal from using this instead of the elm.cabal located in the top level of the project
 ```
 
-```
+```shell
 cabal new-update
 ```
 
-```
+```shell
 cabal new-configure --ghc-option=-optl=-pthread # Ignoring the other flags used for the Alpine Docker
 ```
 
-```
+```shell
 cabal new-build
 ```
 
@@ -187,15 +187,15 @@ On the other hand, it may not be wise to follow the [official install instructio
 
 We can place the executable anywhere, but following standard practice these days would involve making a folder \${HOME}/.elm/bin, and placing it there, then adding \${HOME}/.elm/bin to our .bashrc:
 
-```
+```shell
 mkdir -p ${HOME}/.elm/bin
 ```
 
-```
+```shell
 cp ./dist-newstyle/build/x86_64-linux/ghc-8.4.3/elm-0.19.1/x/elm/build/elm/elm ${HOME}/.elm/bin/
 ```
 
-```
+```shell
 chmod +x ${HOME}/.elm/bin/elm
 ```
 ### Editing .bashrc (or other environment file):
