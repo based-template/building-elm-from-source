@@ -6,21 +6,21 @@ The following has been tested for the 0.19.1 release on Ubuntu 21.04, based on t
 
 You'll need ghc and cabal, which are the Haskell compiler and build system, respectively. You'll also need some some other libraries/tools (namely git, C library headers, libncurses headers, ncurses). Installing those looks something like:
 
-```
+```shell
 sudo apt install "build-essential"
 ```
 
-```
+```shell
 sudo apt install libncurses-dev wget
 ```
 
 if you're on Ubuntu. Or 
 
-```
+```shell
 sudo yum groupinstall "Development Tools"
 ```
 
-```
+```shell
 sudo yum install ncurses-devel wget
 ```
 
